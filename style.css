@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+    font-family: "Poppins", sans-serif;
+   
+}
+
+body{
+    background-image: url(bg.jpg);
+    background-size: cover;
+    /* Arka plan tekrarlamaması için*/
+    background-repeat: no-repeat;
+    background-position: center;
+     background-color: black;
+     
+}
+
+
+/* Header Start */
+
+header{
+    height: 100px;
+    border-bottom: 2px solid rgba(255,255,255, 0.06);
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+
+}
+
+.container nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Bunu neden yaptı ? */
+}
+
+.container nav .logo a{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.container .menu{
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+}
+
+
+.container .menu ul{
+    display: flex;
+    column-gap: 30px;
+}
+
+.container .menu ul a{
+    transition: color 0.25s;
+}
+
+.container .menu ul a:hover{
+    color: #0ba2c0;
+
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.menu .menu-button{
+    text-decoration: none;
+    color:#0ba2c0 ;
+    background-color: rgba(255,255,255, 0.08);
+    padding: 12px 24px;
+    border-radius: 56px;
+    transition: all 0.25s;
+}
+
+.menu .menu-button:hover{
+    background-color: #0ba2c0;
+    color: white;
+
+}
+
+/* Header End */
+
+
+/*Section Start*/
+
+.content{
+    color: white;
+    height: calc(100vh - 100px);
+    padding-top: 150px;
+}
+
+.content h1{
+    font-size: 60px;
+    text-align: center;
+
+}
+
+.content p{
+    font-size: 24px;
+    margin-top: 32px;
+    text-align: center;
+
+}
+
+.btn-links{
+    display: flex;
+    margin-top: 48px;
+    justify-content: center;
+    column-gap: 16px;
+}
+.btn-links a{
+    width: 280px;
+    color: black;
+    font-size: 18px;
+    padding: 20px;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 56px;
+    transition: all 0.25s;
+}
+
+.content .btn-links a:hover{
+    background-color: #0ba2c0;
+    color: white;
+
+}
+
+/*Section End*/
+
+
+/* Responsive Start*/
+
+@media(max-width:576px){
+
+.container{
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+
+}
+
+.content .btn-links{
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+.content .btn-links a{
+    padding: 14px;
+    width: 90%;
+}
+
+
+header nav .menu-button{
+    display: none;
+
+}
+
+}
+
+
+
+.content h1{
+    font-size: clamp(24px, 5vw, 48px);
+}
+
+.content p{
+    font-size: clamp(16px, 2.5vw, 24px);
+}
+
+
+
+
+/* Responsive End*/
